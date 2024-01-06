@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>RawgIO Capstone</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    
+    body {
+      background-color: #0d0d0d; /* Dark background */
+      color: #fff; /* White text color */
+      font-family: 'Press Start 2P', cursive; /* Use Press Start 2P font */
+      margin: 0;
+      padding: 0;
+    }
+    
+    nav {
+      background-color: #1f1f1f; /* Dark Gray navbar background */
+      padding: 10px;
+      height: 100vh; /* Make the navbar full height */
+      width: 200px; /* Set a fixed width for the sidebar */
+      position: fixed; /* Fixed position to stay on the left */
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column; /* Stack the list items vertically */
+    }
+    
+    li {
+      margin: 15px 0; /* Adjusted margin */
+    }
+    
+    a {
+      color: #ff69b4; /* Deep Pink text color */
+      text-decoration: none;
+    }
+    
+    a:hover {
+      color: #d946cc; /* Lighter Pink on hover */
+    }
+    
+    .container-fluid {
+      margin-left: 220px; /* Adjusted margin to make room for the sidebar */
+    }
+    
+    .most-popular {
+      padding-left: 15px; /* Add padding to content area */
+    }
+    
+    /* Add a media query to adjust layout for smaller screens */
+    @media (max-width: 768px) {
+      nav {
+        width: 100%; /* Set full width for smaller screens */
+        height: auto;
+        position: static;
+      }
+    
+      ul {
+        flex-direction: row;
+      }
+    
+      li {
+        margin: 0 15px;
+      }
+    
+      .container-fluid {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+  
+<!-- incorporate the "..." preloader screen example found on Rawg.io -->
+  <div id="js-preloader" class="js-preloader loaded">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+ 
+<!-- Using one of Rawg.io's sample forms -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="most-popular">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="heading-section">
+                <h4><em>Gamers</em>PORTAL</h4>
+              </div>
+              <div class="row gameList">
+                
+              </div>
+              <div class="col-lg-12">
+                <div class="main-button hidden">
+                  <a href="javascript:void(0)">Load More Games</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function signup() {
+        const form = document.getElementById("signupForm");
+        const username = form.querySelector("#username").value;
+        const email = form.querySelector("#email").value;
+        const password = form.querySelector("#password").value;
+
+        
+        fetch("/signup", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ username, email, password }),
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Sorry! Please try again!");
+                }
+                return response.json();
+            })
+            .then(data => {
+                window.location.href = "/";
+            })
+            .catch(error => {
+                console.error("Sorry! The information was not able, please try again!", error);
+            });
+    }
+</script>
+  <script src="prod.env.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+body {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    font-family: 'Press Start 2P', cursive; /* Use Press Start 2P font */
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar {
+    background-color: #333; /* Dark Gray navbar background */
+    padding: 10px;
+    text-align: left;
+  }
+
+  .navbar a {
+    color: #d946cc; /* White text color */
+    text-decoration: none;
+    margin: 0 15px;
+  }
+
+  .container {
+    max-width: 400px;
+    margin: 20px auto; /* Adjusted margin */
+    background-color: #000; /* Black container background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 182, 193, 0.5); /* Pink shadow */
+  }
+
+  h2 {
+    color: #ff69b4; /* Deep Pink heading color */
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin-bottom: 8px;
+    color: #fff; /* White label color */
+  }
+
+  input {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ff69b4; /* Deep Pink border */
+    border-radius: 4px;
+    background-color: #333; /* Dark Gray input background */
+    color: #fff; /* White text color */
+  }
+
+  button {
+    padding: 10px;
+    background-color: #ff69b4; /* Deep Pink button color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #d946cc; /* Lighter Pink on hover */
+  }
+
+  
+
+  p {
+    margin-top: 16px;
+    color: #fff; /* White text color */
+  }
+
+  a {
+    color: #ff69b4; /* Deep Pink link color */
+  }
+
+  a:hover {
+    color: #d946cc; /* Lighter Pink on hover */
+  }

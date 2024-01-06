@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Login - GamersPORTAL</title>
+  <link rel="stylesheet" href="./login.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+</head>
+
+<body>
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="signup.html">Sign Up</a>
+    </div>
+  
+    <div class="container">
+      <h2>Login</h2>
+  
+      <form id="loginForm" onsubmit="redirectToHome()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required placeholder="Enter Username">
+  
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required placeholder="Enter Password">
+  
+        <button type="submit">Login</button>
+      </form>
+  
+      <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+    </div>
+  
+  
+    <script>
+      function redirectToHome() {
+     
+        window.location.href = "index.html";
+        
+        return false;
+      }
+    </script>
+  </body>
+  
+  </html>

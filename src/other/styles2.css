@@ -1,0 +1,97 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+.heading-section h1 {
+    color: #ec6090;
+    font-size: 34px;
+    text-decoration: none;
+    margin-bottom: 30px;
+    text-align: center;
+    }
+
+
+  /* GameList styles */
+  .gameList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .item img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .game-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .platforms {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  ul li {
+    margin-bottom: 5px;
+  }
+  
+  .rating {
+    color: #f39c12;
+  }
+  
+  .date {
+    color: #3498db;
+  }
+  
+  /* Button styles */
+  .update-button,
+  .delete-button {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .delete-button {
+    background-color: #e74c3c;
+  }
+  
+  /* Loading indicator styles */
+  #js-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    font-size: 20px;
+    color: #333;
+  }
+  

@@ -1,0 +1,9 @@
+nav {
+  background-color: #1f1f1f; /* Dark Gray navbar background */
+  padding: 10px;
+  height: 100vh; /* Make the navbar full height */
+  width: 200px; /* Set a fixed width for the sidebar */
+  position: fixed; /* Fixed position to stay on the left */
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
